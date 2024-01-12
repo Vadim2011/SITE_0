@@ -7,7 +7,6 @@ const configFav = {
   background: '#fff',
   theme_color: '#fff',
   path: 'favicons/',
-  url: 'http://haydenbleasel.com/',
   lang: 'ru-RU',
   logging: false,
   online: false,
