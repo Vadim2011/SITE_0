@@ -274,7 +274,9 @@ export const fontsBack = () => {
 
     .pipe(gulp.src(`${pathBack.src.fonts}/**/*.ttf`))
     .pipe(ttf2woff2())
+    .pipe(gulp.dest(`${pathBack.build.fonts}`))
 
+    .pipe(gulp.src(`${pathBack.src.fonts}/**/*.woff2`))
     .pipe(gulp.dest(`${pathBack.build.fonts}`))
     .pipe(browserSync.stream());
 }

@@ -268,8 +268,10 @@ export const fontsProd = () => {
 
     .pipe(gulp.src(`${pathProd.src.fonts}/**/*.ttf`))
     .pipe(ttf2woff2())
+    .pipe(gulp.dest(`${pathProd.build.fonts}`))
 
-    .pipe(gulp.dest(`${pathProd.build.fonts}`));
+    .pipe(gulp.src(`${pathDev.src.fonts}/**/*.woff2`))
+    .pipe(gulp.dest(`${pathDev.build.fonts}`))
 }
 
 export const fontsStyleProd = () => {
